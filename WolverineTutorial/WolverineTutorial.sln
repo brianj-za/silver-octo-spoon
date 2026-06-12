@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WolverineTutorial.AppHost", "WolverineTutorial.AppHost\WolverineTutorial.AppHost.csproj", "{71113B40-90C1-4550-BCA8-00623F03E030}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WolverineTutorial.ServiceDefaults", "WolverineTutorial.ServiceDefaults\WolverineTutorial.ServiceDefaults.csproj", "{E1E3618F-210A-4769-95B6-E425A1EE9DE3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WolverineTutorial.ApiService", "WolverineTutorial.ApiService\WolverineTutorial.ApiService.csproj", "{C20E2419-63B6-4DA8-A0AA-55EC97E8C73E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WolverineTutorial.Web", "WolverineTutorial.Web\WolverineTutorial.Web.csproj", "{E58D1450-5333-4E2D-B543-B7003DA7742B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WolverineTutorial.Tests", "WolverineTutorial.Tests\WolverineTutorial.Tests.csproj", "{1AFB0414-265A-43BA-83B5-E7B36EA99226}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{71113B40-90C1-4550-BCA8-00623F03E030}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71113B40-90C1-4550-BCA8-00623F03E030}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71113B40-90C1-4550-BCA8-00623F03E030}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71113B40-90C1-4550-BCA8-00623F03E030}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1E3618F-210A-4769-95B6-E425A1EE9DE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1E3618F-210A-4769-95B6-E425A1EE9DE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1E3618F-210A-4769-95B6-E425A1EE9DE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1E3618F-210A-4769-95B6-E425A1EE9DE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C20E2419-63B6-4DA8-A0AA-55EC97E8C73E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C20E2419-63B6-4DA8-A0AA-55EC97E8C73E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C20E2419-63B6-4DA8-A0AA-55EC97E8C73E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C20E2419-63B6-4DA8-A0AA-55EC97E8C73E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E58D1450-5333-4E2D-B543-B7003DA7742B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E58D1450-5333-4E2D-B543-B7003DA7742B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E58D1450-5333-4E2D-B543-B7003DA7742B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E58D1450-5333-4E2D-B543-B7003DA7742B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AFB0414-265A-43BA-83B5-E7B36EA99226}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AFB0414-265A-43BA-83B5-E7B36EA99226}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AFB0414-265A-43BA-83B5-E7B36EA99226}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AFB0414-265A-43BA-83B5-E7B36EA99226}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
