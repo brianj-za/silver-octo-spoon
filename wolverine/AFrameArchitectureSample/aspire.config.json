@@ -1,6 +1,0 @@
-{
-  "appHost": {
-    "path": "AFrameArchitectureSample.AppHost/AFrameArchitectureSample.AppHost.csproj"
-  },
-  "channel": "stable"
-}
