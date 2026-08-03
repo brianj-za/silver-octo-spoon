@@ -1,0 +1,20 @@
+﻿[tools]
+dotnet = "10"
+
+[tasks.restore]
+description = "Restore the Project"
+run = "dotnet restore"
+
+[tasks.build]
+depends = ["restore"]
+description = "Build the Project"
+run = "dotnet build"
+
+[tasks.clean]
+run = "fd -I \"bin|obj\" -td -X rm -r && dotnet clean"
+
+[tasks.migrate]
+usage = '''
+arg "<name>" help="Migration Name"
+'''
+run = "dotnet ef migrations add \"${usage_name?}\" --startup-project FinancialApi --project FinancialApi.Infrastructure"

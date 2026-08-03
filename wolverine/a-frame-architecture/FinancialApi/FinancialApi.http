@@ -1,0 +1,38 @@
+@FinancialApi_HostAddress = https://localhost:7010
+
+### Apply Fee to an Account
+
+POST {{FinancialApi_HostAddress}}/accounts/apply-fee
+Accept: application/json
+Content-Type: application/json
+
+{
+    "accountId": 2,
+    "amount": 100
+}
+
+### Transfer Between Accounts
+
+POST {{FinancialApi_HostAddress}}/accounts/transfer
+Content-Type: application/json
+
+{
+    "sourceAccountId": 1,
+    "destinationAccountId": 2,
+    "amount": 1000.00
+}
+
+### Reverse a Journal Entry
+
+POST {{FinancialApi_HostAddress}}/journal/reverse
+Content-Type: application/json
+
+{
+    "originalJournalId": "E7FB25DB-406F-4063-A4B0-DE6BB8292437",
+    "reason": "Incorrect Account Fee"
+}
+
+### Events
+
+GET {{FinancialApi_HostAddress}}/events
+Content-Type: application/json
