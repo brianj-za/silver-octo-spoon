@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MappingIssueTest", "MappingIssueTest\MappingIssueTest.csproj", "{0A414846-6DDB-4C19-9E65-C43B017A960C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MappingIssue", "MappingIssue\MappingIssue.csproj", "{0A414846-6DDB-4C19-9E65-C43B017A960C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MappingIssueTest", "MappingIssueTest\MappingIssueTest.csproj", "{6011C12C-9A0A-4474-9494-F80975E22057}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,5 +14,9 @@ Global
 		{0A414846-6DDB-4C19-9E65-C43B017A960C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0A414846-6DDB-4C19-9E65-C43B017A960C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0A414846-6DDB-4C19-9E65-C43B017A960C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6011C12C-9A0A-4474-9494-F80975E22057}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6011C12C-9A0A-4474-9494-F80975E22057}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6011C12C-9A0A-4474-9494-F80975E22057}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6011C12C-9A0A-4474-9494-F80975E22057}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
