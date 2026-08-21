@@ -1,7 +1,7 @@
 ﻿using FinancialApi.Domain.Aggregates;
 using FinancialApi.Domain.Entities;
 using FinancialApi.Domain.Exceptions;
-using FluentAssertions;
+using AwesomeAssertions;
 using Microsoft.Extensions.Time.Testing;
 
 namespace FinancialApi.Domain.Tests;
@@ -16,7 +16,7 @@ public class BalancedJournalEntryTests
         List<JournalLine> lines = [new(1, 100, EntryType.Debit), new(1, 100, EntryType.Credit)];
 
         // Act
-        var act = () => BalancedJournal.Create(Guid.NewGuid(), "Transfer", timeProvider.GetUtcNow(), lines);
+        var act = () => BalancedJournal.Create(Guid.NewGuid(), "Transfer", timeProvider.GetUtcNow(), [.. lines]);
 
         // Assert
         act.Should()
@@ -31,7 +31,7 @@ public class BalancedJournalEntryTests
         List<JournalLine> lines = [new(1, 10, EntryType.Debit), new(1, 100, EntryType.Credit)];
 
         // Act
-        var act = () => BalancedJournal.Create(Guid.NewGuid(), "Transfer", timeProvider.GetUtcNow(), lines);
+        var act = () => BalancedJournal.Create(Guid.NewGuid(), "Transfer", timeProvider.GetUtcNow(), [.. lines]);
 
         // Assert
         act.Should()

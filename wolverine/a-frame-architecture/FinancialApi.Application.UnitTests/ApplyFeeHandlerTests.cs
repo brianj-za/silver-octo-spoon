@@ -3,8 +3,8 @@ using FinancialApi.Application.Handlers;
 using FinancialApi.Application.Models;
 using FinancialApi.Domain.Entities;
 using FinancialApi.Domain.Exceptions;
-using FluentAssertions;
-using FluentAssertions.Execution;
+using AwesomeAssertions;
+using AwesomeAssertions.Execution;
 using Microsoft.Extensions.Time.Testing;
 
 namespace FinancialApi.Application.UnitTests;

@@ -17,7 +17,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddExceptionHandler<DomainExceptionHandler>();
 builder.Services.AddProblemDetails();
 
-var connectionString = "Data Source=demo.db";
+var connectionString = "Data Source=accounts.db";
 
 builder.Services.AddDbContext<AccountDbContext>(options => options.UseSqlite(connectionString));
 

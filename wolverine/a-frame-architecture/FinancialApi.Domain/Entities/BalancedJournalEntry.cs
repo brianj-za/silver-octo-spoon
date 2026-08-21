@@ -5,11 +5,11 @@ public record BalancedJournalEntry
     public Guid Id { get; init; }
     public string Description { get; init; } = null!;
     public DateTimeOffset CreatedAt { get; init; }
-    public List<JournalLine> Lines { get; init; } = [];
+    public JournalLine[] Lines { get; init; } = [];
 
     internal BalancedJournalEntry() { }
     
-    internal BalancedJournalEntry(Guid id, string description, DateTimeOffset createdAt, List<JournalLine> lines)
+    internal BalancedJournalEntry(Guid id, string description, DateTimeOffset createdAt, JournalLine[] lines)
     {
         Lines = lines;
         Id = id;

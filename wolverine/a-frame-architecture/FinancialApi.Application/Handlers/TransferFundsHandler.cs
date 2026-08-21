@@ -43,7 +43,7 @@ public static class TransferFundsHandler
             Guid.NewGuid(),
             $"Transfer: {cmd.Amount} from {cmd.SourceAccountId} to {cmd.DestinationAccountId}",
             context.TimeStamp,
-            lines
+            [.. lines]
         );
 
         var @event = new FundsTransferredEvent(cmd.SourceAccountId, cmd.DestinationAccountId, cmd.Amount);

@@ -3,8 +3,8 @@ using FinancialApi.Application.Handlers;
 using FinancialApi.Application.Models;
 using FinancialApi.Domain.Entities;
 using FinancialApi.Domain.Events;
-using FluentAssertions;
-using FluentAssertions.Execution;
+using AwesomeAssertions;
+using AwesomeAssertions.Execution;
 using Microsoft.Extensions.Time.Testing;
 using Wolverine.Persistence;
 
@@ -45,7 +45,7 @@ public class ReverseJournalHandlerTests
             .Entity.Balance.Should()
             .Be(expectedDestAccountBalance);
         journalWrite.Entity.Lines.Should()
-            .HaveCount(initialJournalWrite.Entity.Lines.Count);
+            .HaveCount(initialJournalWrite.Entity.Lines.Length);
     }
 
     private (IStorageAction<Account> SourceWrite, IStorageAction<Account> DestWrite, IStorageAction<BalancedJournalEntry>

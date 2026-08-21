@@ -1,6 +1,7 @@
 using FinancialApi.Application.Commands;
 using FinancialApi.Application.Interfaces;
 using FinancialApi.Application.Models;
+using FinancialApi.Application.Strategies;
 using FinancialApi.Domain.Aggregates;
 using FinancialApi.Domain.Entities;
 using FinancialApi.Domain.Events;
@@ -28,24 +29,12 @@ public static class ApplyFeeHandler
             FeeContext context
         )
     {
-        var updatedSource = context.Source.ApplyPosting(cmd.Amount, EntryType.Debit);
-        var updatedRevenue = context.Destination.ApplyPosting(cmd.Amount, EntryType.Credit);
-
-        var lines = new List<JournalLine>
-        {
-            new(updatedSource.Id, cmd.Amount, EntryType.Debit), new(updatedRevenue.Id, cmd.Amount, EntryType.Credit)
-        };
-
-        var journalEntry = BalancedJournal.Create(
-            Guid.NewGuid(),
-            $"Service Fee Applied: {cmd.Amount} to Account {cmd.AccountId}",
-            context.TimeStamp,
-            lines
-        );
+        FeePosting posting = new FeePosting();
+        var result = posting.Apply(cmd, context);
 
         var @event = new FeeAppliedEvent(cmd.AccountId, cmd.Amount);
 
-        return (Storage.Update(updatedSource), Storage.Update(updatedRevenue), Storage.Insert(journalEntry.Entry),
+        return (Storage.Update(result.DebitAccount), Storage.Update(result.CreditAccount), Storage.Insert(result.Entry),
             @event);
     }
 }

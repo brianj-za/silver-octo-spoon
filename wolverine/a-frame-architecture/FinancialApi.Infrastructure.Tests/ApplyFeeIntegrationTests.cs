@@ -2,7 +2,7 @@
 using FinancialApi.Application.Interfaces;
 using FinancialApi.Domain.Entities;
 using FinancialApi.Domain.Events;
-using FluentAssertions;
+using AwesomeAssertions;
 using Wolverine;
 using Wolverine.Tracking;
 

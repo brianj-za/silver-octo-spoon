@@ -1,6 +1,6 @@
 using FinancialApi.Domain.Entities;
 using FinancialApi.Domain.Exceptions;
-using FluentAssertions;
+using AwesomeAssertions;
 
 namespace FinancialApi.Domain.Tests;
 

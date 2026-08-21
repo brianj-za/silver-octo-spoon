@@ -12,7 +12,7 @@ public record BalancedJournal
         Entry = entry;
     }
 
-    public static BalancedJournal Create(Guid id, string description, DateTimeOffset createdAt, List<JournalLine> lines)
+    public static BalancedJournal Create(Guid id, string description, DateTimeOffset createdAt, JournalLine[] lines)
     {
         if (lines.Count(l => l.Type == EntryType.Debit) == 0)
         {
@@ -39,7 +39,7 @@ public record BalancedJournal
         var reversedLines = original.Lines.Select(l =>
                 l with { Type = l.Type == EntryType.Debit ? EntryType.Credit : EntryType.Debit }
             )
-            .ToList();
+            .ToArray();
 
         return Create(Guid.NewGuid(), reason, now, reversedLines);
     }

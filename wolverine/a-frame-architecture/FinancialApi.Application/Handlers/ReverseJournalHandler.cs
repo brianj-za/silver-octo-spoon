@@ -41,12 +41,12 @@ public static class ReverseJournalHandler
         );
         var accountState = context.AffectedAccounts.ToDictionary(a => a.Id);
 
-        reversalJournal.Entry.Lines.ForEach(l =>
-            {
-                var currentAccount = accountState[l.AccountId];
-                accountState[l.AccountId] = currentAccount.ApplyPosting(l.Amount, l.Type);
-            }
-        );
+        foreach (var l in reversalJournal.Entry.Lines)
+        {
+            var currentAccount = accountState[l.AccountId];
+            accountState[l.AccountId] = currentAccount.ApplyPosting(l.Amount, l.Type);
+        }
+        
         var accountUow = new UnitOfWork<Account>();
         foreach (var account in accountState.Values)
         {
